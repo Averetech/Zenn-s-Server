@@ -4,24 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zenande Portfolio</title>
+    <style>
+      body {
+        background-color: blueviolet;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+        border-radius: 10px;
+        padding: 0 0 20px 0;
+        border: rgba(58, 58, 58, 0.6) 1px dashed;
+      }
+
+      .main form {
+        width: 40%;
+        margin: 0 auto;
+        padding: 10px 12px;
+      }
+
+      form input {
+        width: 98%;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        margin: 4px 0 12px;
+        padding: 7px 0 7px 2px;
+      }
+
+      form textarea {
+        padding: 0;
+        width: 98%;
+        border: none;
+        outline: none;
+        margin: 20px 0 6px;
+        border-radius: 5px;
+        padding-left: 2px;
+      }
+
+      .footer p {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div class="header">
-      <h1>Contact Me</h1>
+    <div class="container">
+      <div class="header">
+        <h1>Contact Me</h1>
+      </div>
+      <div class="main">
+        <form action="/submit" method="POST">
+          <label for="full-name">Full Name</label><br />
+          <input type="text" id="full-name" name="Name" required /><br />
+          <label for="email-address">Email Address</label><br />
+          <input type="email" id="email-address" name="Email" required /><br />
+          <textarea name="Message" id="message" rows="5"></textarea>
+        </form>
+      </div>
+      <div class="footer">
+        <p>Made with ❤️ by Zenn</p>
+      </div>
     </div>
-    <div class="main">
-      <form action="/submit" method="POST">
-        <label for="full-name">Full Name</label><br />
-        <input type="text" id="full-name" name="Name" required /><br />
-        <label for="email-address">Email Address</label><br />
-        <input type="email" id="email-address" name="Email" required /><br />
-        <label for="contact-number">Contact Number</label><br />
-        <input type="text" id="contact-number" name="Contact" required /><br />
-        <textarea name="Message" id="message" rows="5"></textarea>
-      </form>
-    </div>
-    <div class="footer">
-      <p>Made with ❤️ by Zenn</p>
-    </div>
+    <script></script>
   </body>
 </html>
